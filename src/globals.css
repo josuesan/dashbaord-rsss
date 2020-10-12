@@ -1,0 +1,109 @@
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+main{
+  color: var(--baseColor);
+  background: var(--basebackground);
+}
+
+h1{
+  margin: 0;
+  font-size: 1.7em;
+}
+:root{
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram1:hsl(37, 97%, 70%);
+  --instagram2:hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  --gray: #5f616d;
+  --cardTitle: #6f717e;
+  --switchBall: white;
+  --switch: #5f616d;
+  --gray2: #f0f3fa;
+  --lightGray: #f8f9fe;
+  --baseColor: black;
+  --basebackground: white;
+
+}
+.wrapper{
+  padding: 0 30px;
+}
+.grid{
+  display: grid;
+  grid-row-gap: 25px;
+}
+/*Responsive*/
+
+@media screen and (min-width:480px){
+  .grid{
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+  }
+  .wrapper{
+      max-width: 1440px;
+      margin: auto;
+  }
+}
+@media screen and (min-width:768px){
+  .grid{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 25px;
+  }
+  .wrapper{
+      max-width: 1440px;
+      margin: auto;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .grid{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 25px;
+  }
+  .wrapper{
+      max-width: 1440px;
+      margin: auto;
+  }
+
+}
+
+
+@media (prefers-color-scheme: dark){
+  :root{
+      --gray2: #252b43;
+      --gray: #8088ad;
+      --lightGray: #1d2029;
+      --baseColor: white;
+      --basebackground: #1d2029;
+      --cardTitle: #8088ad;
+      --gray2: #252b43;
+      --switchBall: #262b3e;
+      --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  }
+}
+
+.is-dark-mode{
+  --gray2: #252b43;
+  --gray: #8088ad;
+  --lightGray: #1d2029;
+  --baseColor: white;
+  --basebackground: #1d2029;
+  --cardTitle: #8088ad;
+  --gray2: #252b43;
+  --switchBall: #262b3e;
+  --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+}
+.is-light-mode{
+  --gray: #5f616d;
+  --cardTitle: #6f717e;
+  --switchBall: white;
+  --switch: #5f616d;
+  --gray2: #f0f3fa;
+  --lightGray: #f8f9fe;
+  --baseColor: black;
+  --basebackground: white;
+}
